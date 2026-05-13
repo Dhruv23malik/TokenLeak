@@ -23,10 +23,8 @@ export default function Home() {
                 <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
                   Join hundreds of startups optimizing their infrastructure spend. The audit takes less than 90 seconds.
                 </p>
-                <Button asChild size="lg" className="h-14 px-10 text-lg bg-foreground text-background hover:bg-foreground/90 font-medium rounded-full">
-                  <Link href="/audit">
+                <Button render={<Link href="/audit" />} size="lg" className="h-14 px-10 text-lg bg-foreground text-background hover:bg-foreground/90 font-medium rounded-full">
                     Start Free Audit <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
                 </Button>
               </div>
             </div>

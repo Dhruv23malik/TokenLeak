@@ -47,15 +47,11 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 pt-4"
           >
-            <Button asChild size="lg" className="h-12 px-8 text-base bg-foreground text-background hover:bg-foreground/90 font-medium">
-              <Link href="/audit">
+            <Button render={<Link href="/audit" />} size="lg" className="h-12 px-8 text-base bg-foreground text-background hover:bg-foreground/90 font-medium">
                 Run Free Audit <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="h-12 px-8 text-base border-border bg-transparent hover:bg-secondary">
-              <Link href="/audit">
+            <Button render={<Link href="/audit" />} size="lg" variant="outline" className="h-12 px-8 text-base border-border bg-transparent hover:bg-secondary">
                 <BarChart3 className="mr-2 h-4 w-4" /> View Sample Audit
-              </Link>
             </Button>
           </motion.div>
           

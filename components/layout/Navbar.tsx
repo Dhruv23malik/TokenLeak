@@ -18,8 +18,8 @@ export function Navbar() {
           <Link href="/audit" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
             View Sample Audit
           </Link>
-          <Button asChild className="bg-foreground text-background hover:bg-foreground/90 font-medium">
-            <Link href="/audit">Run Free Audit</Link>
+          <Button render={<Link href="/audit" />} className="bg-foreground text-background hover:bg-foreground/90 font-medium">
+            Run Free Audit
           </Button>
         </div>
       </div>

@@ -83,7 +83,7 @@ export default function AuditPage() {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="stage">Startup Stage</Label>
-                <Select value={context.startupStage} onValueChange={updateStartupStage}>
+                <Select value={context.startupStage} onValueChange={(val: any) => val && updateStartupStage(val)}>
                   <SelectTrigger className="bg-secondary/50 focus:ring-1 focus:ring-accent border-border/50">
                     <SelectValue placeholder="Select stage" />
                   </SelectTrigger>
