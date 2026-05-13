@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/droplet.svg" width="60" alt="TokenLeak Logo" />
+  <h1>TokenLeak</h1>
+  <p><strong>The AI Spend Intelligence Platform for Modern Startups.</strong></p>
+
+  <p>
+    <a href="#why-this-exists">Why This Exists</a> •
+    <a href="#features">Features</a> •
+    <a href="#architecture">Architecture</a> •
+    <a href="#getting-started">Getting Started</a> •
+    <a href="#documentation">Documentation</a>
+  </p>
+</div>
+
+---
+
+## Why This Exists
+
+Most startups treat AI subscriptions like invisible operating expenses. 
+
+Between ChatGPT Enterprise, GitHub Copilot, Claude Pro, Cursor, Midjourney, and dozens of API keys, the modern engineering stack has fractured. Over-provisioned tiers, idle seats, and massive workflow redundancies are silently bleeding runway.
+
+**TokenLeak** was built to surface hidden AI infrastructure waste before it silently compounds into runway loss. We turn passive subscription tracking into active **financial intelligence**.
+
+## Core Features
+
+- **Leak Radar**: Signature multi-axis risk analysis visualizing Stack Complexity, Workflow Redundancy, and Idle Capital.
+- **Narrative Dashboard**: Translates raw metrics into a highly curated, executive-ready financial report focused on runway recovery.
+- **Decoupled Audit Engine**: Pure business logic separated from the UI, executing heuristics on seat utilization, tier inflation, and pricing inefficiencies.
+- **Intelligent Persistence**: Hybrid storage adapter falling back to local session state to guarantee seamless, shareable audit reports even without active database connections.
+
+## Architecture Snapshot
+
+TokenLeak is built on a modern, robust, and scalable foundation:
+
+- **Framework**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS v4 with highly refined, fintech-grade design tokens (minimal gradients, strict typography hierarchy).
+- **State Management**: Zustand with persistent middleware.
+- **Data Persistence Adapter**: Intelligent `saveAudit`/`getAudit` pattern attempting Supabase first, falling back to `localStorage`.
+- **Testing**: Vitest for core engine heuristics.
+- **Visualizations**: Recharts and Framer Motion.
 
 ## Getting Started
 
-First, run the development server:
+### Local Development
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Dhruv23malik/TokenLeak.git
+   cd TokenLeak
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Configure Environment Variables (Optional):
+   Create a `.env.local` file for Supabase integration if desired:
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+   *Note: TokenLeak uses a robust Persistence Adapter. If these variables are not provided, the application will seamlessly fall back to Local Storage to ensure full functionality during evaluation.*
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+5. Visit `http://localhost:3000` to start analyzing AI spend.
 
-To learn more about Next.js, take a look at the following resources:
+## Documentation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For deeper insights into the product and technical strategy behind TokenLeak, please review the included documentation:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [ARCHITECTURE.md](docs/ARCHITECTURE.md) - Deep dive into the decoupled engine and state patterns.
+- [GTM.md](docs/GTM.md) - Go-To-Market strategy and user acquisition thesis.
+- [ECONOMICS.md](docs/ECONOMICS.md) - Unit economics and the business model of spend intelligence.
+- [REFLECTION.md](docs/REFLECTION.md) - Retrospective on building a fintech-grade experience.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<div align="center">
+  <sub>Built for the founders who care about capital efficiency.</sub>
+</div>
